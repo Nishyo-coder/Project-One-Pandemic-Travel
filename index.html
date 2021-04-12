@@ -8,9 +8,7 @@
     <!-- https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/css/uikit.min.css -->
    <!-- UIkit CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/css/uikit.min.css" />
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
 
     <title>Covid Safety</title>
 
@@ -18,23 +16,34 @@
 <body>
     <h1 class="uk-heading-divider">Safer In the Know</h1>
 
-    <nav class="uk-navbar-container" uk-navbar>
+    <nav class="uk-navbar-container"uk-navbar>
         <div class="uk-navbar-left">
     
             <div class="uk-navbar-item">
                 <form class="uk-search uk-search-navbar">
-                    <span uk-search-icon></span>
-                    <input id="submitBtn" class="uk-search-input" type="search" placeholder="Country">
+                    <span><button uk-search-icon="Country"></button></span>
+                    <input id="input" class="uk-search-input" type="search">
                 </form>
-            </div>
-            <div class="container">
-                <div class="row">
-                      <div id="temperature" class="text-center col-6">76
-                        <i id="icon-desc" class="wi wi-day-sunny text-center"></i>
-                      </div>
-    
-        </div>
     </nav>
+
+    <ul id="menu">
+        <li class="ui-state-disabled"><div>Toys (n/a)</div></li>
+        <li><div>Books</div></li>
+        <li><div>Clothing</div></li>
+        <li><div>Electronics</div>
+          <ul>
+            <li class="ui-state-disabled"><div>Home Entertainment</div></li>
+            <li><div>Car Hifi</div></li>
+            <li><div>Utilities</div></li>
+          </ul>
+        </li>
+        <li><div>Movies</div></li>
+        <li><div>Music</div>
+          <ul>
+            <li><div>Rock</div>
+          </ul>
+        </li>
+      </ul>
 
     <div class="uk-flex uk-flex-wrap uk-flex-wrap-around uk-background-muted uk-height-medium text-center">
         <div class="uk-width-1-3 uk-card uk-card-default uk-card-body uk-card-small">TOTAL CASES</div>
@@ -55,6 +64,8 @@
 <!-- Appear to the Right in a container: name total cases //active //cases //tested //recovered deaths -->
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/js/uikit.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/js/uikit-icons.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<link rel="stylesheet" href="style.css">
 </body>
 </html>
 
