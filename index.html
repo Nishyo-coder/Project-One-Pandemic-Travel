@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- project_skeleton
 
     <!-- https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/css/uikit.min.css -->
    <!-- UIkit CSS -->
@@ -19,40 +18,57 @@
 
     <nav class="uk-navbar-container"uk-navbar>
         <div class="uk-navbar-left">
+
+            <!-- <div class="input">
+                <input type="text" class="inputValue" placeholder="Enter A City">
+                <input type="submit" value="Submit" class="button">
+              </div> -->
     
             <div class="uk-navbar-item">
                 <form class="uk-search uk-search-navbar">
-                    <span><button uk-search-icon="Country"></button></span>
-                    <input id="input" class="uk-search-input" type="search">
+                    <form class="uk-search uk-search-default">
+                        <input class="uk-search-input" type="type" placeholder="Enter A Country">
+                        <input type="submit" value="Submit" class="button">
+                    </form>
                 </form>
     </nav>
 
     <ul id="menu">
         <li class="ui-state-disabled"><div>Name of Region</div></li>
-        <li><div>Active Covid-19 Cases</div></li>
-        <li><div>Total Covid-19 Cases</div></li>
-        <li><div>Total Deaths</div>
-          <ul>
-            <li class="ui-state-disabled"><div>WEATHER</div></li>
-            <li><div>Temperature</div></li>
-          </ul>
-        </li>
-        <li><div>Movies</div></li>
-        <li><div>Music</div>
-          <ul>
-            <li><div>Rock</div>
-          </ul>
-        </li>
-      </ul>
-
-    <div class="uk-flex uk-flex-wrap uk-flex-wrap-around uk-background-muted uk-height-medium text-center">
-        <div class="uk-width-1-3 uk-card uk-card-default uk-card-body uk-card-small">TOTAL CASES</div>
-        <div class="uk-width-1-2 uk-card uk-card-default uk-card-body uk-card-small uk-margin-left">ACTIVE CASES</div>
-        <a class="uk-button uk-button-default" href="#modal-center" uk-toggle>Recent News</a>
+        <ul>
+        <a id="Region" class="uk-button uk-button-default" href="#modal-center" uk-toggle>Region</a>
         <div id="modal-center" class="uk-flex-top" uk-modal>
         <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
         <button class="uk-modal-close-default" type="button" uk-close></button>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p id="Reg-Info"></p>NAME OF REGION</p>
+    </ul>
+        <li><div>Active Covid-19 Cases</div></li>
+        <ul>
+            <li><a id= "Cases" class="uk-button uk-button-default" href="#modal-center" uk-toggle>Total Covid-19 Cases</a></li>
+            <li><a id= "Deaths" class="uk-button uk-button-default" href="#modal-center" uk-toggle>Total Deaths</a></li>
+            <div id="modal-center" class="uk-flex-top" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <p id="Cases-Stats">Stats</p>
+        </ul>
+        <li class="ui-state-disabled"><div>WEATHER</div></li>
+        <ul>
+            <a id="Temp" class="uk-button uk-button-default" href="#modal-center" uk-toggle>TEMPERATURE</a>
+            <div id="modal-center" class="uk-flex-top" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <p id="Temp-Data"></p>THE CURRENT WEATHER IN _______ IS:</p>
+        </ul>
+        <li><div>News</div>
+          <ul>
+     <li>
+        <a id="News-Info" class="uk-button uk-button-default" href="#modal-center" uk-toggle>Recent News</a>
+        <div id="modal-center" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <p id="News-Data">COVID RELATED NEWS.</p>
+    </ul>
+</li>
     </div>
 </div>
 
