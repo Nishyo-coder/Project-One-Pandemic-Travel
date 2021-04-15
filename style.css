@@ -1,11 +1,35 @@
+body{
+    background-color: teal
+}
+
 .uk-heading-divider {
     align-items: center;
-    background-color: blue;
+    background-color: white;
     text-align: center;
-    color: cornsilk;
+    color: lightseagreen
 
 }
 
+.uk-navbar-item{
+    border-bottom: mediumaquamarine;
+}
+
 nav {
-    align-items: center;
+    align-items: left;
+}
+
+.uk-heading-divider {
+    align-content: left;
+    
+  }
+
+  .uk-button-default {
+      background-color: linen;
+      outline-style: groove;
+      padding-bottom: 1px;
+  }
+
+  .ui-state-disabled {
+    background-color: linen;
+    color: black;
 }
