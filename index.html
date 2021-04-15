@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/css/uikit.min.css -->
-   <!-- UIkit CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/css/uikit.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/css/uikit.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Covid Safety</title>
 
 </head>
+
 <body>
     <h1 class="uk-heading-divider">Safer In the Know</h1>
 
-    <nav class="uk-navbar-container"uk-navbar>
+    <nav class="uk-navbar-container" uk-navbar>
         <div class="uk-navbar-left">
 
             <!-- <div class="input">
                 <input type="text" class="inputValue" placeholder="Enter A City">
                 <input type="submit" value="Submit" class="button">
               </div> -->
-    
+
             <div class="uk-navbar-item">
                 <form class="uk-search uk-search-navbar">
                     <form class="uk-search uk-search-default">
@@ -32,65 +35,79 @@
                     </form>
                 </form>
     </nav>
-    <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="assets/js/plane over beach.jpeg" uk-img>
+    <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light"
+        data-src="assets/js/beachplane.jpeg" uk-img>
         <h1>Information is Comfort</h1>
-      </div>
+    </div>
 
     <ul id="menu">
-        <li class="ui-state-disabled"><div>Name of Region</div></li>
         <ul>
             <li>
-        <a id="Region" class="uk-button uk-button-default" href="#modal-center" uk-toggle>Region</a>
-        <div id="modal-center" class="uk-flex-top" uk-modal>
-        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-        <button class="uk-modal-close-default" type="button" uk-close></button>
-        <p id="Reg-Info"></p>Regional Information</p>
+                <!-- This is a button toggling the modal -->
+                <button class="uk-button uk-button-default uk-margin-small-right" type="button"
+                    uk-toggle="target: #modal-example">Region</button>
+                <!-- This is the modal -->
+                <div id="modal-example" uk-modal>
+                    <div class="uk-modal-dialog uk-modal-body">
+                        <h2 class="uk-modal-title">Regional</h2>
+                        <p id="Reg-Info"></p>
+                        <p class="uk-text-right">
+                            <button class="uk-button uk-button-primary uk-modal-close" type="button">Close</button>
+                        </p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <li>
+            <!-- This is a button toggling the modal -->
+            <button class="uk-button uk-button-default uk-margin-small-right" type="button"
+                uk-toggle="target: #modal-example">COVID-19 UPDATES</button>
+            <!-- This is the modal -->
+            <div id="modal-example" uk-modal>
+                <div class="uk-modal-dialog uk-modal-body">
+                    <h2 class="uk-modal-title">COVID-CASES</h2>
+                    <p id="Reg-Info"></p>
+                    <p class="uk-text-right">
+                        <button class="uk-button uk-button-primary uk-modal-close" type="button">Close</button>
+                    </p>
+                </div>
+            </div>
+        </li>
     </ul>
 
+    <li>
+        <!-- This is a button toggling the modal -->
+        <button class="uk-button uk-button-default uk-margin-small-right" type="button"
+            uk-toggle="target: #modal-example">RECENT NEWS</button>
 
-    <li class="ui-state-disabled"><div>Covid Cases</div></li>
-        <ul>
-            <li><a id= "Cases" class="uk-button uk-button-default" href="#modal-center" uk-toggle>Total Covid-19 Cases</a>
-            <div id="modal-center" class="uk-flex-top" uk-modal>
-            <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-            <button class="uk-modal-close-default" type="button" uk-close></button>
-            <p id="Cases-Stats">Stats</p>
-        </ul>
-    
 
-        <li class="ui-state-disabled"><div>WEATHER</div></li>
-        <ul>
-            <li>
-            <a id="Temp" class="uk-button uk-button-default" href="#modal-center" uk-toggle>TEMPERATURE</a>
-            <div id="modal-center" class="uk-flex-top" uk-modal>
-            <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-            <button class="uk-modal-close-default" type="button" uk-close></button>
-            <p id="Temp-Data"></p>THE CURRENT WEATHER IN _______ IS:</p>
-        </ul>
-        
-        <li class="ui-state-disabled"><div>Covid Updates</div></li>
-          <ul>
-     <li>
-        <a id="News-Info" class="uk-button uk-button-default" href="#modal-center" uk-toggle>Recent News</a>
-        <div id="modal-center" class="uk-flex-top" uk-modal>
-        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-        <button class="uk-modal-close-default" type="button" uk-close></button>
-        <p id="News-Data">COVID RELATED NEWS.</p>
+        <!-- This is the modal -->
+        <div id="modal-example" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body">
+                <h2 class="uk-modal-title">RELATED NEWS</h2>
+                <p id="Reg-Info"></p>
+                <p class="uk-text-right">
+                    <button class="uk-button uk-button-primary uk-modal-close" type="button">Close</button>
+                </p>
+            </div>
+        </div>
+    </li>
     </ul>
-</li>
-    </div>
-</div>
-
+    </li>
     </div>
     </div>
 
+    </div>
+    </div>
 
 
-<!-- Appear to the Right in a container: name total cases //active //cases //tested //recovered deaths -->
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/js/uikit.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/js/uikit-icons.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<link rel="stylesheet" href="style.css">
+
+    <!-- Appear to the Right in a container: name total cases //active //cases //tested //recovered deaths -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/js/uikit-icons.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 </body>
-</html>
 
+</html>
