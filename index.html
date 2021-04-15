@@ -2,112 +2,97 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/css/uikit.min.css -->
-    <!-- UIkit CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/css/uikit.min.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <title>Covid Safety</title>
-
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/css/uikit.min.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Covid Safety</title>
 </head>
 
 <body>
+  <div>
     <h1 class="uk-heading-divider">Safer In the Know</h1>
+  </div>
 
-    <nav class="uk-navbar-container" uk-navbar>
-        <div class="uk-navbar-left">
-
-            <!-- <div class="input">
-                <input type="text" class="inputValue" placeholder="Enter A City">
-                <input type="submit" value="Submit" class="button">
-              </div> -->
-
-            <div class="uk-navbar-item">
-                <form class="uk-search uk-search-navbar">
-                    <form class="uk-search uk-search-default">
-                        <input class="uk-search-input" type="type" placeholder="Going To:">
-                        <input type="submit" value="Submit" class="button">
-                    </form>
-                </form>
-    </nav>
-    <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light"
-        data-src="assets/js/beachplane.jpeg" uk-img>
-        <h1>Information is Comfort</h1>
-    </div>
-
-    <ul id="menu">
-        <ul>
-            <li>
-                <!-- This is a button toggling the modal -->
-                <button class="uk-button uk-button-default uk-margin-small-right" type="button"
-                    uk-toggle="target: #modal-example">Region</button>
-                <!-- This is the modal -->
-                <div id="modal-example" uk-modal>
-                    <div class="uk-modal-dialog uk-modal-body">
-                        <h2 class="uk-modal-title">Regional</h2>
-                        <p id="Reg-Info"></p>
-                        <p class="uk-text-right">
-                            <button class="uk-button uk-button-primary uk-modal-close" type="button">Close</button>
-                        </p>
-                    </div>
-                </div>
-            </li>
-        </ul>
-
-        <li>
-            <!-- This is a button toggling the modal -->
-            <button class="uk-button uk-button-default uk-margin-small-right" type="button"
-                uk-toggle="target: #modal-example">COVID-19 UPDATES</button>
-            <!-- This is the modal -->
-            <div id="modal-example" uk-modal>
-                <div class="uk-modal-dialog uk-modal-body">
-                    <h2 class="uk-modal-title">COVID-CASES</h2>
-                    <p id="Reg-Info"></p>
-                    <p class="uk-text-right">
-                        <button class="uk-button uk-button-primary uk-modal-close" type="button">Close</button>
-                    </p>
-                </div>
-            </div>
-        </li>
-    </ul>
-
-    <li>
-        <!-- This is a button toggling the modal -->
-        <button class="uk-button uk-button-default uk-margin-small-right" type="button"
-            uk-toggle="target: #modal-example">RECENT NEWS</button>
+  <nav class="uk-navbar-container" uk-navbar>
+    <form class="uk-search uk-search-default search-bar">
+      <input id="input" class="uk-search-input" type="type" placeholder="Going To:">
+      <button id="submitBtn">Submit</button>
+    </form>
+  </nav>
 
 
-        <!-- This is the modal -->
-        <div id="modal-example" uk-modal>
-            <div class="uk-modal-dialog uk-modal-body">
-                <h2 class="uk-modal-title">RELATED NEWS</h2>
-                <p id="Reg-Info"></p>
-                <p class="uk-text-right">
-                    <button class="uk-button uk-button-primary uk-modal-close" type="button">Close</button>
-                </p>
-            </div>
+  <div class="img-container">
+    <img src="./assets/images/beachplane.jpeg" alt="plane landing on beach" width="500" height="600">
+    <h1 class="centered-text">Information is Comfort</h1>
+  </div>
+  </div>
+
+  <div class="menu">
+    <ul>
+      <button class="uk-button uk-button-default uk-margin-small-right" type="button"
+        uk-toggle="target: #modal-example1">Safety Tips</button>
+      <div id="modal-example1" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body">
+          <h2 class="uk-modal-title">Covid-19 Traveling Tips</h2>
+          <li id='bold'>Check local requirements, restrictions and situations</li>
+          <li>Make paper copies of test results and screening documentation</li>
+          <li>Plan for long hours in masks: With layovers, long flights, and ground transportation, you may find you and
+            your family in a mask long hours. You want to pack extra masks!</li>
+          <li>Pack Snacks! Some airport restaurants are not fully open or close early. Check desired location's guidance
+            and restrictions.</li>
+          <li>For Covid Safety Tips, check out:
+            <a>https://www.mayoclinic.org/diseases-conditions/coronavirus/in-depth/coronavirus-safe-travel-advice/art-20486965</a>
+          </li>
+          <p class="uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Close</button>
+          </p>
         </div>
-    </li>
+      </div>
+
+      <button class="uk-button uk-button-default uk-margin-small-right" type="button"
+        uk-toggle="target: #modal-example2">COVID-19 Updates</button>
+      <div id="modal-example2" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body">
+          <h1 id="regionName">Location:</h1>
+          <p id="totalCases">Total Cases:</p>
+          <p id="activeCases">Active Cases:</p>
+          <p id="tested">Tested:</p>
+          <p id="recovered">Recovered:</p>
+          <p class="uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Close</button>
+          </p>
+        </div>
+      </div>
+
+      <button class="uk-button uk-button-default uk-margin-small-right" type="button"
+        uk-toggle="target: #modal-example3">RECENT NEWS</button>
+      <div id="modal-example3" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body">
+          <h2 id="headline3" class="uk-modal-title">Headline</h2>
+          <p id="News-Data">Recent News here</p>
+          <p>Source: New York Times</p>
+          <a id="articleLink"></a>
+          <p class="uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Close</button>
+          </p>
+        </div>
     </ul>
-    </li>
-    </div>
-    </div>
+  </div>
 
-    </div>
-    </div>
+
+  </div>
 
 
 
-    <!-- Appear to the Right in a container: name total cases //active //cases //tested //recovered deaths -->
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/js/uikit-icons.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+  <!-- Appear to the Right in a container: name total cases //active //cases //tested //recovered deaths -->
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/js/uikit-icons.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
