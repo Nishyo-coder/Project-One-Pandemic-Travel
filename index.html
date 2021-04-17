@@ -8,12 +8,14 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/css/uikit.min.css" />
   <link rel="stylesheet" type="text/css"
     href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
   <title>Covid Safety</title>
 </head>
 
 <body>
   <div>
-    <h1 class="uk-heading-divider">Safer In the Know</h1>
+    <h1 id="title" class="uk-heading-divider">Safer In the Know</h1>
   </div>
 
   <nav class="uk-navbar-container" uk-navbar>
@@ -25,8 +27,8 @@
 
 
   <div class="img-container">
-    <img src="./assets/images/beachplane.jpeg" alt="plane landing on beach" width="500" height="600">
-    <h1 class="centered-text">Information is Comfort</h1>
+    <img id="img0" src="./assets/images/beachplane.jpeg" alt="plane landing on beach" width="500" height="600">
+    <h1 id="title" class="centered-text">Information is Comfort</h1>
   </div>
   </div>
 
@@ -44,7 +46,7 @@
           <li>Pack Snacks! Some airport restaurants are not fully open or close early. Check desired location's guidance
             and restrictions.</li>
           <li>For Covid Safety Tips, check out:
-            <a>https://www.mayoclinic.org/diseases-conditions/coronavirus/in-depth/coronavirus-safe-travel-advice/art-20486965</a>
+            <a href='https://www.mayoclinic.org/diseases-conditions/coronavirus/in-depth/coronavirus-safe-travel-advice/art-20486965'>https://www.mayoclinic.org/diseases-conditions/coronavirus/in-depth/coronavirus-safe-travel-advice/art-20486965</a>
           </li>
           <p class="uk-text-right">
             <button class="uk-button uk-button-default uk-modal-close" type="button">Close</button>
@@ -74,13 +76,18 @@
           <h2 id="headline3" class="uk-modal-title">Headline</h2>
           <p id="News-Data">Recent News here</p>
           <p>Source: New York Times</p>
-          <a id="articleLink"></a>
+          <a id="articleLink" href=''></a>
           <p class="uk-text-right">
             <button class="uk-button uk-button-default uk-modal-close" type="button">Close</button>
           </p>
         </div>
     </ul>
   </div>
+
+  <div class="img-container1">
+    <img id="img1" src="./assets/images/all in this togther.jpeg" alt="picture with caption all in this together">
+  </div>
+
 
 
   </div>

@@ -7,8 +7,26 @@ var totalCases = document.querySelector('#totalCases');
 var activeCases = document.querySelector('#activeCases');
 var tested = document.querySelector('#tested');
 var recovered = document.querySelector('#recovered');
-var article = document.querySelector('#articleLink')
+var article = document.querySelector('#articleLink');
 
+refresh()
+
+function refresh() {
+  if (localStorage.getItem('location') === null) {
+    return
+  } else {
+    regionName.textContent = 'Location: ' + localStorage.getItem('location');
+    totalCases.textContent = 'Total Cases: ' + localStorage.getItem('totalcases');
+    activeCases.textContent = 'Active Cases: ' + localStorage.getItem('activeCases');
+    tested.textContent = 'Tested: ' + localStorage.getItem('tested');
+    recovered.textContent = 'Recovered: ' + localStorage.getItem('recovered');
+
+    headline3.textContent = localStorage.getItem('headline');
+    newsData.textContent = localStorage.getItem('snip');
+    article.textContent = localStorage.getItem('article');
+    document.getElementById('articleLink').href = localStorage.getItem('article');
+  }
+}
 
 function getApi() {
 
@@ -27,6 +45,12 @@ function getApi() {
       activeCases.textContent = 'Active Cases: ' + data.data.summary.active_cases;
       tested.textContent = 'Tested: ' + data.data.summary.tested;
       recovered.textContent = 'Recovered: ' + data.data.summary.recovered;
+
+      localStorage.setItem('location', userInput.value);
+      localStorage.setItem('totalcases', data.data.summary.total_cases);
+      localStorage.setItem('activeCases', data.data.summary.active_cases);
+      localStorage.setItem('tested', data.data.summary.tested);
+      localStorage.setItem('recovered', data.data.summary.recovered);
 
     });
   getApi2()
@@ -49,6 +73,12 @@ function getApi2() {
       newsData.textContent = snip;
       headline3.textContent = newsHeadline;
       article.textContent = data.response.docs[0].web_url;
+      document.getElementById('articleLink').href = data.response.docs[0].web_url;
+
+      localStorage.setItem('headline', data.response.docs[0].headline.main);
+      localStorage.setItem('snip', data.response.docs[0].snippet);
+      localStorage.setItem('article', data.response.docs[0].web_url);
+
     });
 
 
